@@ -3,6 +3,7 @@
 set -euxo pipefail
 
 NODENAME="justtesting"
+SCRIPT_DIR="$(dirname "$(realpath "$0")")"
 
 mkdir -p ~/.babylond
 mkdir -p ~/.babylond/cosmovisor
@@ -11,9 +12,9 @@ mkdir -p ~/.babylond/cosmovisor/genesis/bin
 mkdir -p ~/.babylond/cosmovisor/upgrades
 mkdir -p ~/.babylond/config/
 
-cp config.toml ~/.babylond/config/
+cp $SCRIPT_DIR/config.toml ~/.babylond/config/
 
-cd babylon/
+cd $HOME/babylon/
 
 babylond init $NODENAME --chain-id bbn-test-3
 

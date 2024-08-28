@@ -215,12 +215,14 @@ external_address = ""
 # RPC Nodes
 # persistent_peers = "https://rpc.testnet3.babylonchain.io:443,https://babylon-testnet-rpc.polkachu.com:443"
 # gRPC Nodes
-persistent_peers = "https://grpc.testnet3.babylonchain.io:443,http://babylon-testnet-grpc.polkachu.com:20690"
+# persistent_peers = "https://grpc.testnet3.babylonchain.io:443,http://babylon-testnet-grpc.polkachu.com:20690"
 # LCD Node API Nodes
 # persistent_peers  = "https://lcd.testnet3.babylonchain.io:443,https://babylon-testnet-api.polkachu.com:443"
 
+persistent_peers = ""
+
 # seed node from tutorial https://medium.com/@ekko.nodes/run-a-babylon-node-0e1df2fba6ea
-seeds = "3f472746f46493309650e5a033076689996c8881@babylon-testnet.rpc.kjnodes.com:16459"
+seeds = "49b4685f16670e784a0fe78f37cd37d56c7aff0e@3.14.89.82:26656,9cb1974618ddd541c9a4f4562b842b96ffaf1446@3.16.63.237:26656,ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@testnet-seeds.polkachu.com:20656"
 
 # Comma separated list of nodes to keep persistent connections to
 # persistent_peers = ""
