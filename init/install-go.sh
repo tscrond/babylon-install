@@ -2,23 +2,23 @@
 
 set -euxo pipefail
 
-# Download Go binary
+echo "Download Go binary"
 wget https://go.dev/dl/go1.21.6.linux-amd64.tar.gz
 
-# Extract Go binary to the home directory
+echo "Extract Go binary to the home directory"
 sudo tar -C $HOME -xzf go1.21.6.linux-amd64.tar.gz
 
-# Change ownership of the Go directory
+echo Change ownership of the Go directory
 sudo chown -R $(whoami) $HOME/go
 
-# Add Go binary path to .bashrc if it's not already there
+echo "Add Go binary path to .bashrc if it's not already there"
 GO_PATH='export PATH=$PATH:$HOME/go/bin'
 
 if ! grep -q "$GO_PATH" "$HOME/.bashrc"; then
     echo "$GO_PATH" >> "$HOME/.bashrc"
 fi
 
-# Source .bashrc to apply changes immediately
+echo "Source .bashrc to apply changes immediately"
 source "$HOME/.bashrc"
 
 # Optionally, inform the user to restart the terminal
