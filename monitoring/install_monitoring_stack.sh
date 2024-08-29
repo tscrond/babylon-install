@@ -28,7 +28,7 @@ After=network.target
 [Service]
 User=prometheus
 Group=prometheus
-ExecStart=/usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/
+ExecStart=/usr/local/bin/prometheus --config.file /etc/prometheus/prometheus.yml --storage.tsdb.path /var/lib/prometheus/ --web.listen-address=0.0.0.0:9091
 Restart=on-failure
 
 [Install]
