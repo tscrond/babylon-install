@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euxo pipefail
+
 # Define versions
 PROMETHEUS_VERSION="2.47.0"
 GRAFANA_VERSION="10.1.3"
