@@ -13,9 +13,13 @@ sudo chown -R $(whoami) $HOME/go
 
 echo "Add Go binary path to .bashrc if it's not already there"
 GO_PATH='export PATH=$PATH:$HOME/go/bin'
+GOPATH_PATH='export GOPATH=$HOME/go/bin'
+GOPATH_BIN_PATH='export PATH=$PATH:$GOPATH/bin'
 
 if ! grep -q "$GO_PATH" "$HOME/.bashrc"; then
     echo "$GO_PATH" >> "$HOME/.bashrc"
+    echo "$GOPATH_PATH" >> "$HOME/.bashrc"
+    echo "$GOPATH_BIN_PATH" >> "$HOME/.bashrc"
 fi
 
 echo "Source .bashrc to apply changes immediately"
